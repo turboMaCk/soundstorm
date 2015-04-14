@@ -7,8 +7,8 @@ class Particle {
   float lifespan;
 
   Particle(PVector l) {
-    acceleration = new PVector(0,10);
-    velocity = new PVector(random(-1,1),random(-10,0));
+    acceleration = new PVector(0, 10);
+    velocity = new PVector(random(-1, 1), random(-10, 0));
     location = l.get();
     lifespan = 55.0;
   }
@@ -27,11 +27,11 @@ class Particle {
 
   // Method to display
   void display() {
-    stroke(255,lifespan);
-    fill(255,lifespan);
-    ellipse(location.x,location.y,3,3);
+    stroke(255, lifespan);
+    fill(255, lifespan);
+    ellipse(location.x, location.y, 3, 3);
   }
-  
+
   // Is the particle still useful?
   boolean isDead() {
     if (lifespan < 0.0) {
